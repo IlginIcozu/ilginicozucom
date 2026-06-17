@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ilginicozu — embedded background</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Embedded variant: no overlay, no menu button — visuals only. */
+    #overlay, #menu-button { display: none !important; }
+    html, body { background: #000; }
+  </style>
+  <script src="./libraries/p5.min.js"></script>
+  <script>
+    // === No-sound mode for the embedded background ===
+    //
+    // sketch.js gates its visual state mutations behind
+    //     if (Tone.context.state === "running") { ... }
+    // i.e. until the AudioContext is unlocked by a user gesture, the
+    // animation never advances past the first frame. Since this copy is
+    // an ambient background that must (a) auto-start and (b) be silent,
+    // we replace Tone with a no-op proxy:
+    //   • Tone.context.state always reads "running", so the gate passes.
+    //   • Every Tone.* constructor + method returns a chainable proxy
+    //     that swallows all calls and property writes.
+    //   • No AudioContext is ever created — the page stays muted.
+    //
+    // tone.js itself is NOT loaded for this reason; it would overwrite
+    // window.Tone with the real library on load.
+    (function () {
+      function makeNode() {
+        const target = function () { return makeNode(); };
+        return new Proxy(target, {
+          get(_, prop) {
+            if (prop === 'value') return 0;
+            if (prop === 'state') return 'running';
+            if (prop === Symbol.toPrimitive) return () => 0;
+            return makeNode();
+          },
+          set() { return true; }
+        });
+      }
+      window.Tone = new Proxy(function () {}, {
+        get(_, prop) {
+          if (prop === 'context') return { state: 'running' };
+          if (prop === 'start') return function () { return Promise.resolve(); };
+          if (prop === 'now') return function () { return 0; };
+          return makeNode();
+        },
+        construct() { return makeNode(); }
+      });
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Stub overlay/menu so sketch.js's getElementById lookups still
+       resolve to something. Both are hidden via the inline CSS above. -->
+  <div id="overlay" aria-hidden="true">
+    <div id="overlay-content"></div>
+  </div>
+  <button id="menu-button" aria-hidden="true" tabindex="-1">
+    <span class="menu-dot" aria-hidden="true"></span>
+  </button>
+
+  <script src="sketch.js"></script>
+
+</body>
+
+</html>
