@@ -1,24 +1,29 @@
-const portfolioData = {
+/* ─────────────────────────────────────────────────────────────────────────
+   SITE CONTENT
+   All portfolio entries live here. Edit text / media references freely —
+   the renderer in js/app.js consumes this object.
+   ───────────────────────────────────────────────────────────────────────── */
+
+window.SITE_DATA = {
   immersiveSound: [
     {
       title: "La Ruta: Modernidad, Cultura y Descontrol",
       kicker: "Immersive sound design & music",
-     media: {
-  type: "vimeo",
-  id: "1175905575",
-  title: "La ruta"
-},
+      media: {
+        type: "vimeo",
+        id: "1175905575",
+        title: "La ruta"
+      },
       bodyHtml: `
        <h4>Description</h4>
   <p><em>La Ruta</em> transforms the exhibition space into an immersive sensory field shaped by laser, projection, and sound. Conceived as a spatial intervention, the work expands perception and introduces new layers of depth, turning the environment into a shifting audiovisual atmosphere.</p>
   <p>At the core of the piece is a dynamic point cloud system: a real-time particle structure developed in TouchDesigner. Thousands of points behave like a living field, continuously oscillating between density and dissolution, forming a visual language that feels both material and unstable.</p>
   <p>Rather than describing a fixed image, the particles construct atmosphere. Light begins to behave like matter, while sound reinforces its vibratory presence in space. The result is an immersive environment in which form, depth, and motion remain in constant transformation.</p>
   <h4>Info</h4>
-  <p>Developed for: Bombas Gens Centre d’Art Digital<br>Type: Immersive Installation<br>Location: Valencia<br>Year: 2025</p>
+  <p><b>Developed for:</b> Bombas Gens Centre d’Art Digital<br><b>Type:</b> Immersive Installation<br><b>Location:</b> Valencia<br><b>Year:</b> 2025</p>
   <h4>Credits</h4>
-  <p>Immersive Experience Development: Vitamin Studio & Radiantelab<br>Arrangement &amp; Sound Design: Ilgın İçözü</p>
+  <p><b>Immersive Experience Development:</b> Vitamin Studio & Radiantelab<br><b>Arrangement &amp;</b> <b>Sound Design:</b> Ilgın İçözü</p>
         <p class="inline-source">Source: <a href="https://exposicionlaruta.es/" target="_blank" rel="noopener noreferrer">exposicionlaruta.es</a></p>
-        
       `
     },
     {
@@ -61,21 +66,20 @@ const portfolioData = {
         <p class="inline-source">Source: <a href="https://nohlab.com/work/in-line-360" target="_blank" rel="noopener noreferrer">nohlab.com/work/in-line-360</a></p>
       `
     },
- {
-  title: "IN-LINE VERTICAL",
-  kicker: "Placeholder gallery / GitHub assets",
-  media: {
-    type: "gallery",
-    imageFit: "contain",
-    backgroundColor: "#111111",
-    slides: [
-      { src: "assets/placeholders/in-line-vertical-01.webp", alt: "Placeholder slide 1 for IN-LINE VERTICAL" },
-      { src: "assets/placeholders/in-line-vertical-04.webp", alt: "Placeholder slide 2 for IN-LINE VERTICAL" }
-    ]
-  },
+    {
+      title: "IN-LINE VERTICAL",
+      kicker: "Immersive sound design & music",
+      media: {
+        type: "gallery",
+        imageFit: "contain",
+        backgroundColor: "#111111",
+        slides: [
+          { src: "assets/placeholders/in-line-vertical-01.webp", alt: "Placeholder slide 1 for IN-LINE VERTICAL" },
+          { src: "assets/placeholders/in-line-vertical-04.webp", alt: "Placeholder slide 2 for IN-LINE VERTICAL" }
+        ]
+      },
       bodyHtml: `
         <h4>Description</h4>
-        <p>This section is prepared as a sliding image gallery so you can replace the placeholder images with GitHub-hosted assets later.</p>
         <p>The original project rethinks the horizon through a vertical perspective. LED panels, reflective surfaces, haze, and sound turn a limited area into a spatial experience where light behaves as a suspended material and the audiovisual composition aims for a synesthetic perception.</p>
         <h4>Info</h4>
         <p>Type: Immersive Exhibition<br>Date: 2022<br>Duration: 18' 00&quot;<br>Location: Beykoz, Istanbul</p>
@@ -146,16 +150,17 @@ const portfolioData = {
       `
     }
   ],
+
   immersiveExperience: [
-{
-  title: "Official Launch Of Distributed Consciousness",
-  kicker: "Immersive experience design",
-  media: {
-    type: "vimeo",
-    id: "1175841374",
-    title: "Official Launch Of Distributed Consciousness"
-  },
-  bodyHtml: `
+    {
+      title: "Official Launch Of Distributed Consciousness",
+      kicker: "Immersive experience design",
+      media: {
+        type: "vimeo",
+        id: "1175841374",
+        title: "Official Launch Of Distributed Consciousness"
+      },
+      bodyHtml: `
     <h4>Description</h4>
     <p>XTOPIA IMMERSIVE invites visitors into the world of Memo Akten to explore the depths of human consciousness and perception. As part of a series of immersive experiences, the work uses artificial intelligence to expand the boundaries of contemporary art while opening a space for reflection on technology and its impact on society.</p>
     <p>The experience is designed as a sensory environment in which perception is continuously challenged and intensified. Through immersive staging and atmospheric flow, the work encourages viewers to question their place within an increasingly digitalized universe, where the limits between body, image, and system begin to shift.</p>
@@ -166,16 +171,16 @@ const portfolioData = {
     <p>Immersive Logo &amp; Experience Design: Ilgın İçözü</p>
     <p class="inline-source">Source: <a href="https://www.xtopiaworld.com/distributed-consciousness" target="_blank" rel="noopener noreferrer">xtopiaworld.com/distributed-consciousness</a></p>
   `
-},
-{
-  title: "Distributed Consciousness & Deep Meditations",
-  kicker: "Immersive & interaction design",
-  media: {
-    type: "vimeo",
-    id: "1175841541",
-    title: "Deep Meditations"
-  },
-  bodyHtml: `
+    },
+    {
+      title: "Distributed Consciousness & Deep Meditations",
+      kicker: "Immersive & interaction design",
+      media: {
+        type: "vimeo",
+        id: "1175841541",
+        title: "Deep Meditations"
+      },
+      bodyHtml: `
     <h4>Description</h4>
     <p><em>Deep Meditations</em> is a sensory journey into the machine's understanding of human emotion, ritual, and transcendence. Created by Memo Akten, the work explores how artificial neural networks interpret abstract concepts such as love, faith, and spirituality, reconstructing visual and sonic experiences from data-driven dreams.</p>
     <p>The visuals are generated by a neural network trained on publicly shared images labeled “everything.” Filtered through themes such as ritual and belief, these datasets are transformed into a flowing meditation of light and texture, where human experience is reflected back through machine perception.</p>
@@ -186,19 +191,19 @@ const portfolioData = {
     <p>Immersive Experience &amp; Interaction Design: Ilgın İçözü</p>
     <p class="inline-source">Source: <a href="https://www.xtopiaworld.com/copy-of-netizens-citizens-of-the-web-1" target="_blank" rel="noopener noreferrer">xtopiaworld.com/deep-meditations</a></p>
   `
-}
+    }
   ],
-  creativeCoding: [
 
-{
-  title: "Dissonant Oscillations",
-  kicker: "Creative coding",
-  media: {
-    type: "vimeo",
-    id: "1175842094",
-    title: "Dissonant Oscillations"
-  },
-bodyHtml: `
+  creativeCoding: [
+    {
+      title: "Dissonant Oscillations",
+      kicker: "Creative coding",
+      media: {
+        type: "vimeo",
+        id: "1175842094",
+        title: "Dissonant Oscillations"
+      },
+      bodyHtml: `
   <h4>Description</h4>
   <p><em>Dissonant Oscillation</em> by dist.cs is a generative code-based work that captures a quiet dialogue between tension and release. Gradient hues drift across the canvas in steady, pulsing motion, with subtle shifts that create a sense of perpetual transition.</p>
   <p>The work combines feedback loops and chromatic aberration to produce a visual field that feels both restrained and expansive. What emerges is a meditative surface where contrast becomes cohesion, and where dissonance is not resolved, but held in balance.</p>
@@ -209,16 +214,16 @@ bodyHtml: `
   <p>Artist: dist.cs (Ilgın İçözü & Bilge Günay İçözü)</p>
   <p class="inline-source">Source: <a href="https://layer.art/artists/distcs/artworks/dissonant-oscillation" target="_blank" rel="noopener noreferrer">layer.art/artists/distcs/artworks/dissonant-oscillation</a></p>
 `
-},
-{
-  title: "Udnē, Art Basel Miami Beach 2022",
-  kicker: "Creative coding",
-  media: {
-    type: "iframe-src",
-    src: "https://www.youtube.com/embed/BPTy3lZ6Z_Q?rel=0",
-    title: "Udnē"
-  },
-bodyHtml: `
+    },
+    {
+      title: "Udnē, Art Basel Miami Beach 2022",
+      kicker: "Creative coding",
+      media: {
+        type: "iframe-src",
+        src: "https://www.youtube.com/embed/BPTy3lZ6Z_Q?rel=0",
+        title: "Udnē"
+      },
+      bodyHtml: `
   <h4>Description</h4>
   <p><em>Udnē</em> is part of the fxhash interactive minting experience at <em>Performance in Code: Deciphering Value in Generative Art</em>, presented during Art Basel Miami Beach 2022.</p>
   <p>The work is a collection of asymmetric textural compositions shaped through a search for harmony and disharmony. By combining three colors with three unsynchronized mathematical equations, <em>Udnē</em> explores the visual tension of triadic structures while bringing together contrasting textures in non-figurative scenes.</p>
@@ -229,31 +234,33 @@ bodyHtml: `
   <p>Artist: dist.cs (Ilgın İçözü & Bilge Günay İçözü)</p>
   <p class="inline-source">Source: <a href="https://tezos.com/events/art-basel-miami-beach/" target="_blank" rel="noopener noreferrer">tezos.com/events/art-basel-miami-beach</a><br>Project: <a href="https://www.fxhash.xyz/project/udne" target="_blank" rel="noopener noreferrer">fxhash.xyz/project/udne</a></p>
 `
-},
-{
-  title: " ",
-  media: {
-    type: "gallery",
-    slides: [
-      { src: "assets/placeholders/udne-05.jpg", alt: "Gallery placeholder 1" },
-      { src: "assets/placeholders/udne-04.jpeg", alt: "Gallery placeholder 2" },
-      { src: "assets/placeholders/udne-03.jpeg", alt: "Gallery placeholder 3" },
-      { src: "assets/placeholders/udne-02.jpg", alt: "Gallery placeholder 4" },
-      { src: "assets/placeholders/udne-01.jpg", alt: "Gallery placeholder 5" }
-    ]
-  }
-},{
-  title: "DeformedDiff",
-  kicker: "Creative coding",
- media: {
-  type: "iframe-src",
-  src: "https://ipfs.io/ipfs/QmeuY1wsVt5DzNVxBBQazqvJGwjhw6e4RkqLZtWq393d17/",
-  title: "GenerativeProject",
-  contained: true,
-  mediaClass: "project-media-small",
-  frameClass: "project-media-frame-square"
-},
-bodyHtml: `
+    },
+    {
+      title: "",
+      media: {
+        type: "gallery",
+        slides: [
+          { src: "assets/placeholders/udne-05.jpg", alt: "Udnē still 1" },
+          { src: "assets/placeholders/udne-04.jpeg", alt: "Udnē still 2" },
+          { src: "assets/placeholders/udne-03.jpeg", alt: "Udnē still 3" },
+          { src: "assets/placeholders/udne-02.jpg", alt: "Udnē still 4" },
+          { src: "assets/placeholders/udne-01.jpg", alt: "Udnē still 5" }
+        ]
+      }
+    },
+    {
+      title: "DeformedDiff",
+      kicker: "Creative coding",
+      media: {
+        type: "iframe-src",
+        src: "https://ipfs.io/ipfs/QmeuY1wsVt5DzNVxBBQazqvJGwjhw6e4RkqLZtWq393d17/",
+        title: "GenerativeProject",
+        contained: true,
+        mediaClass: "media-small",
+        frameClass: "media-square",
+        interactive: true
+      },
+      bodyHtml: `
   <h4>Description</h4>
   <p><em>DeformedDiff</em> is a curated collection of six interactive generative artworks that explores the relationship between order and chaos within complex systems. Each piece employs a web-based reaction-diffusion algorithm that has been intentionally deformed to produce continuously evolving patterns.</p>
   <p>Generated in real time within a WebGL environment, the works emphasize the interplay of color, motion, and texture. Every iteration in the collection introduces distinct variations through altered color palettes, modified algorithmic parameters, and different kinetic behaviors.</p>
@@ -264,372 +271,130 @@ bodyHtml: `
   <h4>Info</h4>
   <p>Type: Interactive Generative Artwork<br>Tools: p5.js &amp; WebGL</p>
 `
-},
-{
-  title: "",
-  media: {
-    type: "iframe-src",
-    src: "https://ipfs.io/ipfs/QmatX7h1qh8t7VXvkRtc2FouMR8HsnhtpdYqwY32pDhvdn/",
-    title: "GenerativeProject"
-  },
-  bodyHtml: `
-    <h4><strong>Click to generate a new iteration</strong></h4>
-  `
-}
-  ]
-};
-
-const creativeCodingExtraGallery = [
-  {
-    title: " ",
-    media: {
-      type: "gallery",
-      contained: true,
-      slides: [
-        { src: "assets/placeholders/a (1).jpg", alt: "Gallery image 1" },
-        { src: "assets/placeholders/a (2).jpg", alt: "Gallery image 2" },
-        { src: "assets/placeholders/a (3).jpg", alt: "Gallery image 3" },
-        { src: "assets/placeholders/a (4).jpg", alt: "Gallery image 5" },
-        { src: "assets/placeholders/a (5).jpg", alt: "Gallery image 6" },
-        { src: "assets/placeholders/a (6).jpg", alt: "Gallery image 7" },
-        { src: "assets/placeholders/a (7).jpg", alt: "Gallery image 8" },
-        { src: "assets/placeholders/a (8).jpg", alt: "Gallery image 9" },
-        { src: "assets/placeholders/a (9).jpg", alt: "Gallery image 10" },
-        { src: "assets/placeholders/a (10).jpg", alt: "Gallery image 11" },
-        { src: "assets/placeholders/a (11).jpg", alt: "Gallery image 12" },
-        { src: "assets/placeholders/a (12).jpg", alt: "Gallery image 13" },
-        { src: "assets/placeholders/a (13).jpg", alt: "Gallery image 14" },
-        { src: "assets/placeholders/a (14).jpg", alt: "Gallery image 15" },
-        { src: "assets/placeholders/a (15).jpg", alt: "Gallery image 16" },
-        { src: "assets/placeholders/a (16).jpg", alt: "Gallery image 17" },
-        { src: "assets/placeholders/a (17).jpg", alt: "Gallery image 18" },
-        { src: "assets/placeholders/a (18).jpg", alt: "Gallery image 19" },
-        { src: "assets/placeholders/a (19).jpg", alt: "Gallery image 20" },
-        { src: "assets/placeholders/a (20).jpg", alt: "Gallery image 21" },
-        { src: "assets/placeholders/a (21).jpg", alt: "Gallery image 25" },
-        { src: "assets/placeholders/a (22).jpg", alt: "Gallery image 26" },
-        { src: "assets/placeholders/a (23).jpg", alt: "Gallery image 27" },
-        { src: "assets/placeholders/a (24).jpg", alt: "Gallery image 28" },
-        { src: "assets/placeholders/a (25).jpg", alt: "Gallery image 29" },
-        { src: "assets/placeholders/a (26).jpg", alt: "Gallery image 30" },
-        { src: "assets/placeholders/a (27).jpg", alt: "Gallery image 31" },
-        { src: "assets/placeholders/a (28).jpg", alt: "Gallery image 32" },
-        { src: "assets/placeholders/a (29).jpg", alt: "Gallery image 33" },
-        { src: "assets/placeholders/a (30).jpg", alt: "Gallery image 34" },
-        { src: "assets/placeholders/a (31).jpg", alt: "Gallery image 35" },
-        { src: "assets/placeholders/a (32).jpg", alt: "Gallery image 36" },
-        { src: "assets/placeholders/a (33).jpg", alt: "Gallery image 37" },
-        { src: "assets/placeholders/a (34).jpg", alt: "Gallery image 38" },
-        { src: "assets/placeholders/a (35).jpg", alt: "Gallery image 39" },
-        { src: "assets/placeholders/a (36).jpg", alt: "Gallery image 40" },
-        { src: "assets/placeholders/a (37).jpg", alt: "Gallery image 41" },
-        { src: "assets/placeholders/a (38).jpg", alt: "Gallery image 42" }
-  
-      ]
-    },
-    bodyHtml: ``
-  }
-];
-
-const releaseMusicData = [
-  {
-    title: "Anatore",
-    url: "https://ilginicozu.bandcamp.com/album/anatore",
-    cover: "https://f4.bcbits.com/img/a1692139937_10.jpg",
-    format: "Digital Album",
-    release: "Released January 7, 2024",
-    note: "Indigenous Breakcore",
-    tracks: "3 tracks",
-    tags: ["drum & bass", "experimental", "electro-acoustic"]
-  },
-  {
-    title: "Sonic.xp",
-    url: "https://ilginicozu.bandcamp.com/album/sonic-xp",
-    cover: "https://f4.bcbits.com/img/a1612421744_10.jpg",
-    format: "Digital Album",
-    release: "Released July 13, 2023",
-    tracks: "2 tracks",
-    tags: ["experimental", "acousmatic", "electro-acoustic"]
-  },
-  {
-    title: "Cardenias",
-    url: "https://ilginicozu.bandcamp.com/album/cardenias",
-    cover: "https://f4.bcbits.com/img/a2798357965_10.jpg",
-    format: "Digital Album",
-    release: "Released November 23, 2022",
-    tracks: "3 tracks",
-    note: "Composed for and premiered in an octaphonic setting, these pieces explore timbres hidden within mundane materials and instruments performed with extended techniques.",
-    tags: ["experimental", "acousmatic", "musique concrete"]
-  },
-  {
-    title: "Uzlaşma: Music for a Theater Play",
-    url: "https://ilginicozu.bandcamp.com/track/uzla-ma-music-for-a-theater-play",
-    cover: "https://f4.bcbits.com/img/a3132380601_10.jpg",
-    format: "Digital Track",
-    release: "Released October 16s, 2021",
-    tracks: "Single track",
-    tags: ["acoustic", "electro-acoustic", "theater music"]
-  },
-  {
-    title: "Variations",
-    url: "https://ilginicozu.bandcamp.com/track/variations",
-    cover: "https://f4.bcbits.com/img/a3523661742_10.jpg",
-    format: "Digital Track",
-    release: "Released September 7, 2021",
-    tracks: "Single track",
-    tags: ["experimental", "acoustic", "piano solo"]
-  },
-  {
-    title: "Anatolian Sellers - Movement I // Performed by Hezarfen Ensemble",
-    url: "https://ilginicozu.bandcamp.com/track/anatolian-sellers-movement-i-performed-by-hezarfen-ensemble",
-    cover: "https://f4.bcbits.com/img/a3285185093_10.jpg",
-    format: "Digital Track",
-    release: "Released April 9, 2021",
-    tracks: "Single track",
-    tags: ["experimental", "acousmatic", "electro-acoustic"]
-  }
-];
-
-function escapeHtml(text = "") {
-  return text
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
-
-function renderMedia(media, title) {
-  if (!media) return "";
-
-  if (media.type === "vimeo") {
-    return `
-      <div class="project-media">
-        <div class="project-media-frame">
-          <iframe
-            src="https://player.vimeo.com/video/${media.id}?title=0&amp;byline=0&amp;portrait=0"
-            title="${escapeHtml(media.title || title)}"
-            loading="lazy"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    `;
-  }
-
- if (media.type === "iframe-src") {
-  return `
-    <div class="project-media ${media.contained ? "project-media-contained" : ""} ${media.mediaClass || ""}">
-      <div class="project-media-frame ${media.frameClass || ""}">
-        <iframe
-          src="${media.src}"
-          title="${escapeHtml(media.title || title)}"
-          loading="lazy"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  `;
-}
-  if (media.type === "gallery") {
-    const galleryId = `gallery-${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
-    return `
-      <div class="project-media ${media.contained ? "project-media-contained" : ""}">
-        <div class="gallery-shell" data-gallery id="${galleryId}">
-          <div class="gallery-track">
-            ${media.slides
-              .map(
-                (slide) => `
-                  <figure class="gallery-slide">
-                    <img src="${slide.src}" alt="${escapeHtml(slide.alt || title)}" loading="lazy" />
-                  </figure>
-                `
-              )
-              .join("")}
-          </div>
-          <div class="gallery-ui">
-            <span class="gallery-count">1 / ${media.slides.length}</span>
-            <div class="gallery-buttons">
-              <button class="gallery-button" type="button" data-gallery-prev>Prev</button>
-              <button class="gallery-button" type="button" data-gallery-next>Next</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  return `
-    <div class="project-media">
-      <div class="project-media-frame placeholder-frame">
-        <img src="${media.src}" alt="${escapeHtml(media.alt || title)}" loading="lazy" />
-      </div>
-    </div>
-  `;
-}
-
-function renderProject(project) {
-  return `
-    <article class="project-card">
-      ${renderMedia(project.media, project.title)}
-      <div class="project-meta">
-        <div class="project-title-col">
-          ${project.kicker ? `<p class="project-kicker">${escapeHtml(project.kicker)}</p>` : ""}
-          <h3 class="project-title">${escapeHtml(project.title)}</h3>
-        </div>
-        <div class="project-text">${project.bodyHtml || ""}</div>
-      </div>
-    </article>
-  `;
-}
-
-function renderReleaseCard(release) {
-  return `
-    <a class="release-card" href="${release.url}" target="_blank" rel="noopener noreferrer">
-      <div class="release-cover">
-        <img src="${release.cover}" alt="${escapeHtml(release.title)} cover" loading="lazy" />
-      </div>
-      <div class="release-card-body">
-        <p class="release-format">${escapeHtml(release.format)}</p>
-        <h3 class="release-card-title">${escapeHtml(release.title)}</h3>
-        <p class="release-meta">${escapeHtml(release.release)} · ${escapeHtml(release.tracks)}</p>
-        ${release.note ? `<p class="release-note">${escapeHtml(release.note)}</p>` : ""}
-        ${release.tags?.length ? `
-          <div class="release-tags">
-            ${release.tags.map(tag => `<span class="release-tag">${escapeHtml(tag)}</span>`).join("")}
-          </div>
-        ` : ""}
-      </div>
-    </a>
-  `;
-}
-
-function mountReleaseMusic(targetId, items) {
-  const target = document.getElementById(targetId);
-  if (!target) return;
-  target.innerHTML = items.map(renderReleaseCard).join("");
-}
-
-function mountProjects(targetId, items) {
-  const target = document.getElementById(targetId);
-  if (!target) return;
-  target.innerHTML = items.map(renderProject).join("");
-}
-
-function initActiveNav() {
-  const links = [...document.querySelectorAll('.top-nav a')];
-  const sections = links
-    .map((link) => {
-      const el = document.querySelector(link.getAttribute('href'));
-      return el ? { link, el } : null;
-    })
-    .filter(Boolean);
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const item = sections.find((section) => section.el === entry.target);
-        if (!item) return;
-        if (entry.isIntersecting) {
-          links.forEach((link) => link.classList.remove('is-active'));
-          item.link.classList.add('is-active');
-        }
-      });
     },
     {
-      rootMargin: '-30% 0px -55% 0px',
-      threshold: 0
+      title: "",
+      media: {
+        type: "iframe-src",
+        src: "https://ipfs.io/ipfs/QmatX7h1qh8t7VXvkRtc2FouMR8HsnhtpdYqwY32pDhvdn/",
+        title: "GenerativeProject",
+        interactive: true
+      },
+      bodyHtml: `
+    <h4><strong>Click to generate a new iteration</strong></h4>
+  `
     }
-  );
+  ],
 
-  sections.forEach((section) => observer.observe(section.el));
-}
-
-function initGalleries() {
-  const AUTO_SLIDE_MS = 6000;
-
-  document.querySelectorAll('[data-gallery]').forEach((gallery) => {
-    const track = gallery.querySelector('.gallery-track');
-    const slides = [...gallery.querySelectorAll('.gallery-slide')];
-    const count = gallery.querySelector('.gallery-count');
-    const prev = gallery.querySelector('[data-gallery-prev]');
-    const next = gallery.querySelector('[data-gallery-next]');
-    let index = 0;
-    let autoSlide = null;
-
-    function update() {
-      track.style.transform = `translateX(-${index * 100}%)`;
-      count.textContent = `${index + 1} / ${slides.length}`;
+  creativeCodingExtraGallery: [
+    {
+      title: "",
+      media: {
+        type: "gallery",
+        contained: true,
+        imageFit: "contain",
+        backgroundColor: "#0d0d0f",
+        slides: [
+          { src: "assets/placeholders/a (1).jpg", alt: "Gallery image 1" },
+          { src: "assets/placeholders/a (2).jpg", alt: "Gallery image 2" },
+          { src: "assets/placeholders/a (3).jpg", alt: "Gallery image 3" },
+          { src: "assets/placeholders/a (4).jpg", alt: "Gallery image 4" },
+          { src: "assets/placeholders/a (5).jpg", alt: "Gallery image 5" },
+          { src: "assets/placeholders/a (6).jpg", alt: "Gallery image 6" },
+          { src: "assets/placeholders/a (7).jpg", alt: "Gallery image 7" },
+          { src: "assets/placeholders/a (8).jpg", alt: "Gallery image 8" },
+          { src: "assets/placeholders/a (9).jpg", alt: "Gallery image 9" },
+          { src: "assets/placeholders/a (10).jpg", alt: "Gallery image 10" },
+          { src: "assets/placeholders/a (11).jpg", alt: "Gallery image 11" },
+          { src: "assets/placeholders/a (12).jpg", alt: "Gallery image 12" },
+          { src: "assets/placeholders/a (13).jpg", alt: "Gallery image 13" },
+          { src: "assets/placeholders/a (14).jpg", alt: "Gallery image 14" },
+          { src: "assets/placeholders/a (15).jpg", alt: "Gallery image 15" },
+          { src: "assets/placeholders/a (16).jpg", alt: "Gallery image 16" },
+          { src: "assets/placeholders/a (17).jpg", alt: "Gallery image 17" },
+          { src: "assets/placeholders/a (18).jpg", alt: "Gallery image 18" },
+          { src: "assets/placeholders/a (19).jpg", alt: "Gallery image 19" },
+          { src: "assets/placeholders/a (20).jpg", alt: "Gallery image 20" },
+          { src: "assets/placeholders/a (21).jpg", alt: "Gallery image 21" },
+          { src: "assets/placeholders/a (22).jpg", alt: "Gallery image 22" },
+          { src: "assets/placeholders/a (23).jpg", alt: "Gallery image 23" },
+          { src: "assets/placeholders/a (24).jpg", alt: "Gallery image 24" },
+          { src: "assets/placeholders/a (25).jpg", alt: "Gallery image 25" },
+          { src: "assets/placeholders/a (26).jpg", alt: "Gallery image 26" },
+          { src: "assets/placeholders/a (27).jpg", alt: "Gallery image 27" },
+          { src: "assets/placeholders/a (28).jpg", alt: "Gallery image 28" },
+          { src: "assets/placeholders/a (29).jpg", alt: "Gallery image 29" },
+          { src: "assets/placeholders/a (30).jpg", alt: "Gallery image 30" },
+          { src: "assets/placeholders/a (31).jpg", alt: "Gallery image 31" },
+          { src: "assets/placeholders/a (32).jpg", alt: "Gallery image 32" },
+          { src: "assets/placeholders/a (33).jpg", alt: "Gallery image 33" },
+          { src: "assets/placeholders/a (34).jpg", alt: "Gallery image 34" },
+          { src: "assets/placeholders/a (35).jpg", alt: "Gallery image 35" },
+          { src: "assets/placeholders/a (36).jpg", alt: "Gallery image 36" },
+          { src: "assets/placeholders/a (37).jpg", alt: "Gallery image 37" },
+          { src: "assets/placeholders/a (38).jpg", alt: "Gallery image 38" }
+        ]
+      },
+      bodyHtml: ``
     }
+  ],
 
-    function goToSlide(newIndex) {
-      index = (newIndex + slides.length) % slides.length;
-      update();
+  releases: [
+    {
+      title: "Anatore",
+      url: "https://ilginicozu.bandcamp.com/album/anatore",
+      cover: "https://f4.bcbits.com/img/a1692139937_10.jpg",
+      format: "Digital Album",
+      release: "Released January 7, 2024",
+      note: "Indigenous Breakcore",
+      tracks: "3 tracks",
+      tags: ["breakcore", "experimental", "drum & bass"]
+    },
+    {
+      title: "Sonic.xp",
+      url: "https://ilginicozu.bandcamp.com/album/sonic-xp",
+      cover: "https://f4.bcbits.com/img/a1612421744_10.jpg",
+      format: "Digital Album",
+      release: "Released July 13, 2023",
+      tracks: "2 tracks",
+      tags: ["experimental", "acousmatic", "electro-acoustic"]
+    },
+    {
+      title: "Cardenias",
+      url: "https://ilginicozu.bandcamp.com/album/cardenias",
+      cover: "https://f4.bcbits.com/img/a2798357965_10.jpg",
+      format: "Digital Album",
+      release: "Released November 23, 2022",
+      tracks: "3 tracks",
+      note: "Composed for and premiered in an octaphonic setting, these pieces explore timbres hidden within mundane materials and instruments performed with extended techniques.",
+      tags: ["experimental", "acousmatic", "musique concrete"]
+    },
+    {
+      title: "Uzlaşma: Music for a Theater Play",
+      url: "https://ilginicozu.bandcamp.com/track/uzla-ma-music-for-a-theater-play",
+      cover: "https://f4.bcbits.com/img/a3132380601_10.jpg",
+      format: "Digital Track",
+      release: "Released October 16, 2021",
+      tracks: "Single track",
+      tags: ["acoustic", "electro-acoustic", "theater music"]
+    },
+    {
+      title: "Variations",
+      url: "https://ilginicozu.bandcamp.com/track/variations",
+      cover: "https://f4.bcbits.com/img/a3523661742_10.jpg",
+      format: "Digital Track",
+      release: "Released September 7, 2021",
+      tracks: "Single track",
+      tags: ["experimental", "acoustic", "piano solo"]
+    },
+    {
+      title: "Anatolian Sellers - Movement I // Performed by Hezarfen Ensemble",
+      url: "https://ilginicozu.bandcamp.com/track/anatolian-sellers-movement-i-performed-by-hezarfen-ensemble",
+      cover: "https://f4.bcbits.com/img/a3285185093_10.jpg",
+      format: "Digital Track",
+      release: "Released April 9, 2021",
+      tracks: "Single track",
+      tags: ["experimental", "acousmatic"]
     }
-
-    function startAutoSlide() {
-      stopAutoSlide();
-      if (slides.length <= 1) return;
-      autoSlide = setInterval(() => {
-        goToSlide(index + 1);
-      }, AUTO_SLIDE_MS);
-    }
-
-    function stopAutoSlide() {
-      if (autoSlide) {
-        clearInterval(autoSlide);
-        autoSlide = null;
-      }
-    }
-
-    prev?.addEventListener('click', () => {
-      goToSlide(index - 1);
-      startAutoSlide();
-    });
-
-    next?.addEventListener('click', () => {
-      goToSlide(index + 1);
-      startAutoSlide();
-    });
-
-    gallery.addEventListener('mouseenter', stopAutoSlide);
-    gallery.addEventListener('mouseleave', startAutoSlide);
-    gallery.addEventListener('focusin', stopAutoSlide);
-    gallery.addEventListener('focusout', startAutoSlide);
-
-    update();
-    startAutoSlide();
-  });
-}
-
-mountProjects('immersive-sound-list', portfolioData.immersiveSound);
-mountProjects('immersive-experience-list', portfolioData.immersiveExperience);
-mountProjects('creative-coding-list', portfolioData.creativeCoding);
-mountProjects('creative-coding-extra-gallery', creativeCodingExtraGallery);
-mountReleaseMusic('release-music-list', releaseMusicData);
-initActiveNav();
-initGalleries();
-
-document.getElementById('year').textContent = new Date().getFullYear();
-
-(function () {
-  const root = document.documentElement;
-  const btn = document.getElementById('theme-toggle');
-  const saved = localStorage.getItem('theme');
-
-  function applyTheme(theme) {
-    root.setAttribute('data-theme', theme);
-  }
-
-  applyTheme(saved === 'dark' ? 'dark' : 'light');
-
-  btn.addEventListener('click', function () {
-    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
-    localStorage.setItem('theme', next);
-  });
-}());
+  ]
+};

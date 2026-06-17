@@ -1,2 +1,2 @@
-# Ilgın İçözü Portfolio Website
+# Ilgın İçözü — Portfolio Website
 
